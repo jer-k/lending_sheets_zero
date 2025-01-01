@@ -19,8 +19,13 @@ type NavItem = {
 function teamNavItems(teamId: string): NavItem[] {
 	return [
 		{
-			title: "Clients",
-			url: `/teams/${teamId}/clients`,
+			title: "Messages",
+			url: `/messages`,
+			icon: Users,
+		},
+		{
+			title: "Other Page",
+			url: "/other",
 			icon: Users,
 		},
 	];

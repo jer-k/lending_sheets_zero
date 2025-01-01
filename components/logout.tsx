@@ -7,27 +7,10 @@ import { LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenuItem } from "@/components/ui/dropdown-menu";
 
-import { apiClient } from "@/lib/client-api-client";
-
 export function Logout() {
-	const router = useRouter();
-
-	const logoutFn = useMutation({
-		mutationFn: async () => {
-			return apiClient.delete("/session");
-		},
-		onSuccess: () => {
-			router.push("/login");
-		},
-	});
-
 	return (
 		<DropdownMenuItem asChild>
-			<Button
-				className="cursor-pointer justify-start w-full"
-				variant="ghost"
-				onClick={() => logoutFn.mutate()}
-			>
+			<Button className="cursor-pointer justify-start w-full" variant="ghost">
 				<LogOut />
 				Log out
 			</Button>

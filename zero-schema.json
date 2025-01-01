@@ -36,7 +36,7 @@
               "senderID"
             ],
             "destField": [
-              "public_id"
+              "id"
             ],
             "destSchema": "users"
           }
@@ -48,16 +48,16 @@
           "id"
         ],
         "columns": {
-          "first_name": {
-            "type": "string",
-            "optional": false
-          },
           "id": {
-            "type": "number",
+            "type": "string",
             "optional": false
           },
-          "public_id": {
+          "name": {
             "type": "string",
+            "optional": false
+          },
+          "partner": {
+            "type": "boolean",
             "optional": false
           }
         },

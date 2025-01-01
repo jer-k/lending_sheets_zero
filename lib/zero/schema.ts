@@ -14,7 +14,7 @@ const messageSchema = {
 		sender: {
 			sourceField: "senderID",
 			destSchema: () => userSchema,
-			destField: "public_id",
+			destField: "id",
 		},
 	},
 } as const;
@@ -22,9 +22,9 @@ const messageSchema = {
 const userSchema = {
 	tableName: "users",
 	columns: {
-		id: "number",
-		public_id: "string",
-		first_name: "string",
+		id: "string",
+		name: "string",
+		partner: "boolean",
 	},
 	primaryKey: "id",
 } as const;
