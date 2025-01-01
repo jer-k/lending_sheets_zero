@@ -1,0 +1,68 @@
+{
+  "permissions": {},
+  "schema": {
+    "version": 1,
+    "tables": {
+      "message": {
+        "tableName": "message",
+        "primaryKey": [
+          "id"
+        ],
+        "columns": {
+          "body": {
+            "type": "string",
+            "optional": false
+          },
+          "id": {
+            "type": "string",
+            "optional": false
+          },
+          "mediumID": {
+            "type": "string",
+            "optional": false
+          },
+          "senderID": {
+            "type": "string",
+            "optional": false
+          },
+          "timestamp": {
+            "type": "number",
+            "optional": false
+          }
+        },
+        "relationships": {
+          "sender": {
+            "sourceField": [
+              "senderID"
+            ],
+            "destField": [
+              "public_id"
+            ],
+            "destSchema": "users"
+          }
+        }
+      },
+      "users": {
+        "tableName": "users",
+        "primaryKey": [
+          "id"
+        ],
+        "columns": {
+          "first_name": {
+            "type": "string",
+            "optional": false
+          },
+          "id": {
+            "type": "number",
+            "optional": false
+          },
+          "public_id": {
+            "type": "string",
+            "optional": false
+          }
+        },
+        "relationships": {}
+      }
+    }
+  }
+}
