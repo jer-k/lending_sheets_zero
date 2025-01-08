@@ -20,7 +20,7 @@ const messageSchema = {
 } as const;
 
 const userSchema = {
-	tableName: "users",
+	tableName: "user",
 	columns: {
 		id: "string",
 		name: "string",
@@ -33,7 +33,7 @@ export const schema = createSchema({
 	version: 1,
 	tables: {
 		message: messageSchema,
-		users: userSchema,
+		user: userSchema,
 	},
 });
 
