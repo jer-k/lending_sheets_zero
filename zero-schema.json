@@ -38,12 +38,12 @@
             "destField": [
               "id"
             ],
-            "destSchema": "users"
+            "destSchema": "user"
           }
         }
       },
-      "users": {
-        "tableName": "users",
+      "user": {
+        "tableName": "user",
         "primaryKey": [
           "id"
         ],
