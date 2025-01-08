@@ -34,8 +34,10 @@ export function messagesQuery(
 
 	console.log("calling query, what are props?", sort, sortDir);
 
+	// Need to set a senderID to make this work!
+	const senderID = "";
 	let query = z.query.message
-		.whereExists("sender", (q) => q.where("public_id", "dx5jj6lz9cbw"))
+		.whereExists("sender", (q) => q.where("id", senderID))
 		.related("sender", (q) => q.one())
 		.orderBy(sort, sortDir);
 
