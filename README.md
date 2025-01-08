@@ -28,6 +28,9 @@ Which ends up causing a flicker because the count of records goes back to 0. Not
 I set up the `schema.ts` to be the same as `hello-zero` so you should be able to change the values in `.env` to point
 to your local copy and this repo *should* just work.
 
+Only caveat is you need to set a `senderID` [here](https://github.com/jer-k/lending_sheets_zero/blob/main/queries/messages.ts#L38) so
+that the join can work.
+
 ## Re-creating the issue
 
 * Start the dev server - `npm run dev`
